@@ -1,0 +1,86 @@
+## Insert new values
+
+Par_TradeRoute:
+    Method: insert # no function
+    Inherit_Fuel: True
+    Value:
+        SE2-SE1: 23
+        SE1-SE2: 45
+
+Par_TradeCapacity:
+    Method: insert # no function
+    Inherit_Fuel: False
+    Value:
+        Power:
+            SE2-SE1: 2
+            SE1-SE2: 3
+
+Par_RegionalCCSLimit:
+    Method: insert
+    Value:
+        SE1: 2
+        SE2: 3
+
+
+## divide aggregated market area by respective shares
+
+Par_ResidualCapacity:
+    Method: divide
+    Value:
+        NO1: 0.2
+        NO2: 0.8
+
+Par_TotalAnnualMaxActivity:
+    Method: divide
+    Value:
+        NO1: 0.2
+        NO2: 0.8
+        
+Par_TotalAnnualMaxACapacity:
+    Method: divide
+    Value:
+        NO1: 0.2
+        NO2: 0.8        
+    
+Par_ModelPeriodActivityMaxLimit:
+    Method: divide
+    Value:
+        NO1: 0.2
+        NO2: 0.8
+
+
+Par_RegionalBaseYearProduction:
+    Method: divide
+    Value:
+        NO1: 0.5
+        NO2: 0.5
+        
+Par_SpecifiedAnnualDemand:
+    Method: divide
+    Value:
+        NO1: 0.5
+        NO2: 0.5
+
+
+## Copy from aggregated data if available
+
+Par_TradeCapacityGrowthCosts:
+    Method: copy # no function
+    
+Par_GrowthRateTradeCapacity:
+    Method: copy
+    
+Par_RegionalAnnualEmissionLimit:
+    Method: copy    
+  
+Par_EmissionsPenalty:
+    Method: copy
+    
+Par_ReserveMargin:
+    Method: copy
+    
+Par_AvailabilityFactor:
+    Method: copy
+    
+Par_ModalSplitByFuel:
+    Method: copy
