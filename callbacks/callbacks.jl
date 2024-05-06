@@ -64,8 +64,8 @@ function get_callbacks(app)
             )
         )
         # println(typeof(new_child))
-        push!(div_children, new_child)
-        return div_children
+        # push!(div_children, new_child)
+        return [new_child]
 end
 
     callback!(app,
